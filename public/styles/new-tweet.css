@@ -1,51 +1,35 @@
-.new-tweet {
-  margin-bottom: 35px;
-  margin-top: 25px;
+label {
+  font-weight: 600;
 }
 
-.new-tweet form {
+textarea {
+  background-color: #f4f1ec;
+  border-style: none;
+}
+
+.input-top {
+  border-bottom-style: solid;
+  padding-bottom: 1em;
+  margin-top: 96px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.new-tweet label {
-  font-weight: 600;
-  width: 70vw;
   text-align: left;
+  height: 65px;
 }
 
-.tweet-button-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.input-bottom {
   font-family: "Bungee", cursive;
-  font-size: 0.8em;
-  margin-top: 10px;
-  width: 70vw;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.tweet-button-area button {
-  background-color: #394893;
-  color: #ffffff;
-  border: none;
-  height: 30px;
-  cursor: pointer;
+button {
+  color: #fff;
+  background-color: #4056a1;
 }
 
-.tweet-button-area button:hover {
-  background-color: #1a1f44;
-}
-
-#tweet-text {
-  background-color: #f4f1ec;
-  height: 69px;
-  width: 70vw;
-  border: none;
-  border: 1px solid #545149;
-  border-bottom: 4px solid #545149;
-  font-size: 0.8em;
-  font-weight: 300;
-  padding: 5px;
+.red {
+  color: red;
 }

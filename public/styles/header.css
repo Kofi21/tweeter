@@ -1,4 +1,4 @@
-header {
+#main-header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -8,4 +8,5 @@ header {
   background-color: #40a7e3;
   background-image: url("../images/back-pattern.png");
   color: #ffffff;
+  margin-top: 120px;
 }

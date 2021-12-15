@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="/styles/tweet-list.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -35,7 +36,7 @@
       <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header>
+    <header id="main-header">
     <div class="avatar">
       <img src="/images/profile-hex.png">
     </div>
@@ -47,17 +48,37 @@
 
     <!-- Page-specific (main) content here -->
 <main class="container">
-<section class="new-tweet">
-  <!-- <h2>Compose Tweet</h2> -->
-  <form action="/tweets/" method="POST">
-    <label for="tweet-text">What are you humming about?</label>
-    <textarea name="text" id="tweet-text"></textarea>
-    <div class="tweet-button-area">
-      <button type="submit">Tweet</button>
-      <output name="counter" class="counter" for="tweet-text">140</output>
-    </div>
-  </form>
-</section>
+      <section class="new-tweet">
+        <form method="post" action="/tweets">
+          <div class="input-top">
+            <!-- <label for="tweet-text">What are you humming about?</label> -->
+            <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+          </div>
+          <div class="input-bottom">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section class="tweet">
+        <article>
+          <header class="tweet-header">
+            <div>Newton</div>
+            <div class="handle">@SirIssac</div>
+          </header>
+          <p>If I have seen further, it is by standing on the shoulders of giants</p>
+          <footer class="tweet-footer">
+            <div>Date</div>
+            <div class="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
 </main>
+    <script type="text/javascript" src="./scripts/compose-char-counter.js"></script>
+
   </body>
 </html>

@@ -4,12 +4,13 @@ nav {
   background-color: #4056a1;
   color: #ffffff;
   font-family: "Bungee", cursive;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5em 0 1.5em;
-  position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 0%;
 }
 
 .write-tweet {
@@ -21,4 +22,8 @@ nav {
 .write-tweet p {
   padding: 0;
   margin: 0;
+}
+
+header {
+  z-index: 0;
 }
