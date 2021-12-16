@@ -5,6 +5,15 @@
  */
 
 $(document).ready(function () {
+  $("form").submit(function (event) {
+    event.preventDefault();
+    $.ajax("/tweets", {
+      method: "POST",
+      data: $(this).serialize(),
+    });
+    console.log(event);
+  });
+
   const renderTweets = function (tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
