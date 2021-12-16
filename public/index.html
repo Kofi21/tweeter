@@ -24,8 +24,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+
   </head>
 
   <body>
@@ -33,15 +32,20 @@
     <nav>
       <span id="title">tweeter</span>
       <div class="write-tweet">
-      <p>Write a new tweet</p>
+      <p><strong>Write</strong> a new tweet</p>
+      <div class="arrow-down">
       <i class="fas fa-angle-double-down"></i>
+      </div>
+      <div class="arrow-up">
+      <i class="fas fa-angle-double-up"></i>
+      </div>
       </div>
     </nav>
     <header id="main-header">
     <div class="avatar">
       <img src="/images/profile-hex.png">
     </div>
-      <br>
+      <br />
       <div class="your-name">
         <h2>God's Son</h2>
       </div>
@@ -50,7 +54,10 @@
     <!-- Page-specific (main) content here -->
 <main class="container">
       <section class="new-tweet">
-        <form method="post" action="/tweets">
+        <div class="error">
+          <h3></h3>
+          </div>
+        <form method="POST" action="/tweets">
           <div class="input-top">
             <!-- <label for="tweet-text">What are you humming about?</label> -->
             <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
@@ -62,25 +69,12 @@
         </form>
       </section>
       <section id="tweets-container">
-        <!-- <article  class="tweet">
-          <header class="tweet-header">
-            <img src="" />
-            <div>Newton</div>
-            <div class="handle">@SirIssac</div>
-          </header>
-          <p>If I have seen further, it is by standing on the shoulders of giants</p>
-          <footer class="tweet-footer">
-            <div>Date</div>
-            <div class="icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article> -->
+
       </section>
 </main>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="./scripts/compose-char-counter.js"></script>
-
+  <script type="text/javascript" src="/scripts/helpers.js"></script>
   </body>
 </html>

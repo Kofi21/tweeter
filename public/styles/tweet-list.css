@@ -3,6 +3,7 @@
   padding: 16px;
   margin: 96px 0;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .tweet-header {
