@@ -2,12 +2,18 @@
   border-style: solid;
   padding: 16px;
   margin: 96px 0;
+  text-align: left;
 }
 
 .tweet-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.username {
+  width: 100%;
+  margin: 20px;
 }
 
 .tweet-footer {
