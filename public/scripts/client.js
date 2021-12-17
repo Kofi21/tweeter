@@ -43,17 +43,41 @@ $(document).ready(function () {
     tweetTextBox.val("");
   };
 
+  const error = $(".error h3");
+  error.hide();
+
+  const arrowDown = $(".arrow-down");
+  arrowDown.show();
+
+  const scrollToTop = $(".scroll-to-top");
+  scrollToTop.hide();
+
   $("form").submit(function (event) {
     event.preventDefault();
     const tweetTextValue = $(this).find("#tweet-text").val().trim();
+    const error = $(".error h3");
+    const textArea = $(".new-tweet textarea");
+
+    $(textArea).keyup(function () {
+      error.html("");
+      error.slideUp();
+    });
 
     if (tweetTextValue === "" || null) {
-      alert("Tweet something");
-      return;
+      error.html(
+        `<i class="fas fa-exclamation-triangle"></i> Error: Tweet Cannot be Empty `
+      );
+      textArea.focus();
+      error.slideDown();
+      return error;
     }
     if (tweetTextValue.length > 140) {
-      alert("Tweets are limited to 140 characters!");
-      return;
+      error.html(
+        `<i class="fas fa-exclamation-triangle"></i> Error: Exceeded max character limit`
+      );
+      error.slideDown();
+      textArea.focus();
+      return error;
     }
 
     $.ajax({

@@ -33,3 +33,19 @@ button {
 .red {
   color: red;
 }
+
+.error {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.error h3 {
+  border: solid red;
+  color: #ff1200;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px;
+}
