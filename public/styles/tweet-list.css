@@ -49,3 +49,9 @@
   color: #4056a1;
   opacity: 0.3;
 }
+
+@media screen and (min-width: 1024px) {
+  .tweet {
+    width: 60vw;
+  }
+}

@@ -1,4 +1,9 @@
-label {
+.new-tweet {
+  margin-bottom: 35px;
+  /* margin-top: 10em; */
+}
+
+.new-tweet label {
   font-weight: 600;
 }
 
@@ -48,4 +53,15 @@ button {
   width: 100%;
   text-align: center;
   padding: 15px 0px;
+}
+
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-top: 6em;
+    /* margin-left: 6em; */
+  }
+
+  textarea {
+    width: 60vw;
+  }
 }
