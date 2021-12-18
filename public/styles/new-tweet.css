@@ -1,6 +1,5 @@
 .new-tweet {
   margin-bottom: 35px;
-  /* margin-top: 10em; */
 }
 
 .new-tweet label {
@@ -58,7 +57,6 @@ button {
 @media screen and (min-width: 1024px) {
   .new-tweet {
     margin-top: 6em;
-    /* margin-left: 6em; */
   }
 
   textarea {
