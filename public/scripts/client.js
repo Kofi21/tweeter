@@ -6,12 +6,13 @@ $(document).ready(function () {
     }
   };
 
+  //ESCAPE
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-
+  //CREATE TWEET
   const createTweetElement = function (tweet) {
     const date = timeago.format(tweet.created_at);
 
@@ -55,6 +56,7 @@ $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
     const tweetTextValue = $(this).find("#tweet-text").val().trim();
+    //ERROR CHECK
     const error = $(".error h3");
     const textArea = $(".new-tweet textarea");
 
@@ -79,7 +81,7 @@ $(document).ready(function () {
       textArea.focus();
       return error;
     }
-
+    //AJAX POST CALL
     $.ajax({
       url: "/tweets",
       method: "POST",
@@ -98,6 +100,6 @@ $(document).ready(function () {
       renderTweets(tweet);
     });
   };
-
+  //LOAD EXISTING TWEETS IN DATABSE
   loadTweets();
 });
