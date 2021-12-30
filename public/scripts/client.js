@@ -65,7 +65,7 @@ $(document).ready(function () {
       error.slideUp();
     });
 
-    if (tweetTextValue === "" || null) {
+    if (!tweetTextValue) {
       error.html(
         `<i class="fas fa-exclamation-triangle"></i> Error: Tweet Cannot be Empty `
       );

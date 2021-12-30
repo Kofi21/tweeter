@@ -6,6 +6,10 @@
   word-wrap: break-word;
 }
 
+.tweet:hover {
+  box-shadow: 5px 8px #a5a5a5;
+}
+
 .tweet-header {
   display: flex;
   flex-direction: row;
